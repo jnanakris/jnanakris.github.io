@@ -1,0 +1,136 @@
+/* General Styling */
+body { 
+    font-family: 'Trebuchet MS', sans-serif; 
+    background-color: #2c1e1e; /* Dark brown for a warm feel */
+    color: #fff; /* White text for readability */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header { 
+    background: linear-gradient(90deg, #ff9800, #ff5722); /* Warm orange-red gradient */
+    color: #fff; /* White text for contrast */
+    text-align: center; 
+    padding: 20px 10px;
+    border-bottom: 5px solid #8b4513; /* Dark brown border */
+}
+
+h1 {
+    font-size: 36px;
+    color: #fff; /* White instead of gold for readability */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 22px;
+    color: #ffe4b5; /* Lighter warm yellow */
+    font-style: italic;
+}
+
+/* Navigation */
+nav { 
+    text-align: center; 
+    margin-top: 15px;
+}
+
+nav a { 
+    text-decoration: none; 
+    color: #fff; /* White links */
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+nav a:hover { 
+    color: #ffd700; /* Gold on hover */
+    background: #5a2d0c; /* Dark brown */
+    border-radius: 5px;
+}
+
+/* Main Content */
+main { 
+    text-align: left; 
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: #402828; /* Deep brown for a cozy feel */
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 153, 51, 0.3);
+}
+
+/* Headings */
+h3 {
+    font-size: 24px;
+    color: #ffcc33; /* Warm golden */
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Main Paragraphs */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd;
+    text-align: justify;
+}
+
+
+/* Lists */
+main ul {
+    list-style-type: square;
+    margin-left: 25px;
+}
+
+main ul li {
+    margin-bottom: 10px;
+    color: #ffcc33; /* Golden bullet points */
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background: #333; /* Darker background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-top: 3px solid #8b4513;
+}
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer a {
+    color: #ffcc33; /* Gold links */
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #ff5733; /* Bright orange on hover */
+}
+
+/* Validation Images */
+.html-css-val {
+    border: 0;
+    width: 88px;
+    height: 31px;
+    filter: brightness(1.2);
+}
+
+footer p {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
