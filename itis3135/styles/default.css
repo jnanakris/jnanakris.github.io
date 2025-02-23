@@ -37,3 +37,7 @@ main ul li {
     height:31px
 }
 
+.newwindow-link::after {
+    content: '\1F5D7';
+    margin-left: 5px;
+}
