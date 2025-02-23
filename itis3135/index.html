@@ -9,59 +9,19 @@
 </head>
 <body>
     <header>
-        <h1> Jnana Krishnamsetty's Jeweled Kebab || ITIS 3135</h1>
-        <nav>
-            <a href="./index.html">Home</a>
-            ||
-            <a href="introduction.html">Introduction</a>
-            ||
-            <a href="website_evaluations.html">Website Evaluations</a>
-            ||
-            <a href="stuff/Crappy_news.html">Crappy News</a>
-            ||            
-            <a href="contract.html">Contract</a>
-        </nav>
+        <div data-include="components/header.html"></div>
     </header>
     <main>
         <h2 class="main-h2"> ITIS 3135 Home </h2>
         <p class="main-h2"> This is all the content for my ITIS 3135 class</p>
     </main>
     <footer>
-        <nav>
-            <ul>
-                <li><a href="https://www.charlotte.edu/">UNCC Home Page</a></li>
-                <li>|</li>
-                <li><a href="https://webpages.charlotte.edu/jkrishn3/">My UNCC Home Page</a></li>
-                <li>|</li>                
-                <li><a href="https://github.com/jnanakris/jnanakris.github.io/">My GitHub Repo</a></li>
-				<li>|</li>
-                <li><a href="https://jnanakris.github.io/">My GitHub.io page</a></li>
-				<li>|</li>
-                <li><a href="https://jnanakris.github.io/itis3135/index.html">My ITIS3135 in GitHub.io </a></li>
-				<li>|</li>
-                <li><a href="https://www.freecodecamp.org/jnanakris">My FreeCodeCamp Profile</a></li>
-                <li>|</li>
-                <li><a href="https://www.codecademy.com/profiles/jnanakris">My CodeAcademy Profile</a></li>
-                <li>|</li>
-				<li><a href="https://www.linkedin.com/in/jnanak">My LinkedIn</a></li>
-            </ul>
-        </nav>
-        <p>
-            Designed By &copy; 2025 <a href="./jnanatechsolutions.com">Jnana Tech Solutions</a> , 
-            <a href="https://www.freecodecamp.org/certification/JnanaKris/responsive-web-design">
-                <i>Certified in Responsive Web Design</i>
-            </a>    
-        </p>
-        <a href="https://validator.w3.org/check?uri=referer" id="validation-link-html">
-            <img class="html-css-val"  src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
-        </a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation-link-css">
-            <img class="html-css-val" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
-        </a>
+        <div data-include="components/footer.html"></div>
     </footer>
     <script>
         document.getElementById("validation-link-html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
         document.getElementById("validation-link-css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
     </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
