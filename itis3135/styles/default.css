@@ -4,7 +4,7 @@ nav { text-align: center; margin-top: 20px; }
 nav ul { list-style-type: none; padding: 0; }
 nav ul li { display: inline; margin-right: 10px; }
 nav ul li a { text-decoration: none; color: #333; }
-main { text-align: left; padding: 15px; }
+main { text-align: left; padding: 15px;}
 
 .main-h2 {
     text-align: center;
@@ -14,7 +14,7 @@ figure img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20%; /* Adjust width as necessary */
+    width: 20%;
 }
 
 figcaption {
@@ -23,7 +23,7 @@ figcaption {
 }
 
 main ul {
-    list-style-type: disc; /* Adjust as you prefer */
+    list-style-type: disc;
     margin-left: 20px;
 }
 
@@ -40,4 +40,39 @@ main ul li {
 .newwindow-link::after {
     content: '\1F5D7';
     margin-left: 5px;
+}
+
+
+/* MOBILE RULES */
+/* Remove Initial */
+html, body {
+    all:initial;
+}
+
+/* Foundational Three */
+main, .maincontainer {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Rule Overrides For Laptops / Small Screens */
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    #colorbox {
+        background-color:yellow; 
+    }
+}
+
+/* Rule Overrides For Tablet Devices */
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    #colorbox {
+        background-color:orange;
+    }
+}
+
+/* Rule Overrides For Mobile Devices */
+@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+    #colorbox {
+        background-color:red;
+    }
 }
