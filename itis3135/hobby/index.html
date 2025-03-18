@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Biking Adventures | Jnana Krishnamsetty</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        /* Embedded stylesheet as required */
+        :root {
+            --primary: #2E8B57;
+            --secondary: #3A5F0B;
+            --accent: #FF8C00;
+            --light: #F0F7E9;
+            --dark: #1E3A20;
+            --shadow: rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px var(--shadow);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        nav {
+            background-color: var(--secondary);
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--accent);
+            color: var(--dark);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px var(--shadow);
+            display: none; /* Hidden by default */
+        }
+
+        /* Show the "what" section by default */
+        #what {
+            display: block;
+        }
+
+        section h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        figure {
+            margin: 20px 0;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px var(--shadow);
+        }
+
+        figcaption {
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
+            color: var(--secondary);
+        }
+
+        .prompt-description {
+            font-style: italic;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-left: 3px solid var(--accent);
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .trail-map {
+            width: 100%;
+            height: 300px;
+            background-color: #e9e9e9;
+            margin: 15px 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        input, textarea, select {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--accent);
+        }
+
+        .validation-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .validation-links img {
+            border: 0;
+            width: 88px;
+            height: 31px;
+        }
+
+        /* For active nav link */
+        .active-link {
+            background-color: var(--accent);
+            color: var(--dark);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mountain Biking Adventures</h1>
+        <nav>
+            <a href="#" id="nav-what" class="active-link">Home</a> 🚲 
+            <a href="#" id="nav-who">About Me</a> 🚲 
+            <a href="#" id="nav-when">Best Times</a> 🚲 
+            <a href="#" id="nav-where">Best Trails</a> 🚲 
+            <a href="#" id="nav-how">Getting Started</a> 🚲 
+            <a href="#" id="nav-why">Why Ride</a> 🚲 
+            <a href="#" id="nav-ai">AI Prompts</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home/What Section -->
+        <section id="what">
+            <h2>Welcome to the World of Mountain Biking</h2>
+            <p>Mountain biking is an exhilarating outdoor activity that combines adventure, exercise, and a connection with nature. Riders navigate trails of varying difficulty through forests, mountains, and various terrains on specially designed bikes.</p>
+            
+            <figure>
+                <img src="images/mountain-biking-trail.jpg" alt="Mountain biker on a forest trail" width="800" height="500">
+                <figcaption>A typical mountain biking trail through a forest</figcaption>
+            </figure>
+            <p class="prompt-description">Image prompt: "A mountain biker riding through a forest trail, morning light filtering through trees, photorealistic style, action shot from the side, no people visible in the foreground."</p>
+            
+            <p>Modern mountain biking evolved in the 1970s in California when cyclists began exploring off-road trails with modified bicycles. Today, it has grown into a diverse sport with multiple disciplines including cross-country, trail riding, all-mountain, downhill, freeride, and dirt jumping.</p>
+            
+            <p>Whether you're seeking adrenaline rushes down steep descents, peaceful rides through scenic terrain, or the physical challenge of climbing technical trails, mountain biking offers something for everyone.</p>
+        </section>
+
+        <!-- Who/About Me Section -->
+        <section id="who">
+            <h2>About Me</h2>
+            <p>My journey with mountain biking began five years ago when I was looking for an outdoor activity that combined adventure, exercise, and exploration. What started as weekend rides on local trails quickly evolved into a passion that has taken me across numerous trail systems throughout the United States.</p>
+            
+            <figure>
+                <img src="images/mountain-biker-portrait.jpg" alt="Mountain biker resting on trail" width="800" height="500">
+                <figcaption>Taking a break after conquering a challenging trail</figcaption>
+            </figure>
+            <p class="prompt-description">Image prompt: "Mountain biker taking a break on a scenic overlook, wearing helmet and sunglasses, looking at the camera, mountains in background, natural lighting, photorealistic."</p>
+            
+            <p>I primarily ride trail and all-mountain styles, preferring the balanced experience of both climbs and descents. My current ride is a 2023 Santa Cruz Tallboy with 120mm of travel - the perfect companion for the technical but flowing trails I prefer.</p>
+            
+            <p>Through mountain biking, I've connected with an incredible community of riders, improved my physical fitness dramatically, and discovered hidden natural gems I would have never encountered otherwise. The sport has become more than just a hobby - it's a lifestyle that has shaped how I plan vacations, spend weekends, and even the friends I've made along the way.</p>
+        </section>
+
+        <!-- When Section -->
+        <section id="when">
+            <h2>Best Seasons & Times to Ride</h2>
+            <p>The ideal time for mountain biking depends largely on your location, but generally, there are optimal seasons and times of day that enhance the experience.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Season</th>
+                        <th>Advantages</th>
+                        <th>Challenges</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Spring</td>
+                        <td>Mild temperatures, beautiful scenery with blooming plants</td>
+                        <td>Muddy trails after rainfall, potential trail closures</td>
+                    </tr>
+                    <tr>
+                        <td>Summer</td>
+                        <td>Long daylight hours, dry trails, access to high elevations</td>
+                        <td>Extreme heat during midday, crowded popular trails</td>
+                    </tr>
+                    <tr>
+                        <td>Fall</td>
+                        <td>Stunning foliage, comfortable temperatures, less crowded</td>
+                        <td>Shorter daylight hours, leaf coverage hiding obstacles</td>
+                    </tr>
+                    <tr>
+                        <td>Winter</td>
+                        <td>Solitude, unique scenery, no insects</td>
+                        <td>Cold temperatures, snow/ice hazards, limited daylight</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <figure>
+                <img src="images/mountain-biking-fall.jpg" alt="Mountain biker riding through autumn foliage" width="800" height="500">
+                <figcaption>Fall offers some of the most spectacular mountain biking with vibrant colors</figcaption>
+            </figure>
+            <p class="prompt-description">Image prompt: "Mountain biker riding through a forest trail with vibrant autumn foliage, golden light, colorful red and orange leaves, natural setting, action shot from behind the rider."</p>
+            
+            <p>For daily timing, early mornings or late afternoons generally provide the best riding conditions. Morning rides offer crisp air, better visibility, and fewer trail users. Evening rides feature beautiful lighting and cooler temperatures after hot days. Avoiding midday rides during summer months is recommended due to heat and higher UV exposure.</p>
+        </section>
+
+        <!-- Where Section -->
+        <section id="where">
+            <h2>Best Mountain Biking Locations</h2>
+            <p>The United States offers an incredible variety of mountain biking destinations, from flowing singletrack to technical rock gardens and everything in between.</p>
+            
+            <figure>
+                <img src="images/mountain-biking-moab.jpg" alt="Mountain biker on slickrock trail in Moab" width="800" height="500">
+                <figcaption>The iconic Slickrock Trail in Moab, Utah offers unique riding on sandstone</figcaption>
+            </figure>
+            <p class="prompt-description">Image prompt: "Mountain biker riding on red slickrock in Moab, Utah, vast desert landscape, clear blue sky, distant red rock formations, wide angle shot showing the scale of the landscape."</p>
+            
+            <div class="trail-map">
+                <p>Trail Map Placeholder</p>
+            </div>
+            
+            <h3>Top Destinations:</h3>
+            <ul>
+                <li><strong>Moab, Utah</strong> - Home to the legendary Slickrock Trail and countless miles of desert riding with breathtaking views.</li>
+                <li><strong>Crested Butte, Colorado</strong> - Known as the birthplace of mountain biking with over 750 miles of singletrack.</li>
+                <li><strong>Whistler, British Columbia</strong> - The mecca of downhill mountain biking with the world-famous Whistler Bike Park.</li>
+                <li><strong>Sedona, Arizona</strong> - Technical trails through stunning red rock formations and desert landscapes.</li>
+                <li><strong>Brevard, North Carolina</strong> - Pisgah National Forest offers diverse riding from flowy to highly technical in a beautiful forest setting.</li>
+            </ul>
+            
+            <p>When traveling to ride, always research trail conditions in advance, respect local rules, and consider hiring a local guide for your first day to discover the best routes.</p>
+        </section>
+
+        <!-- How Section -->
+        <section id="how">
+            <h2>Getting Started with Mountain Biking</h2>
+            <p>Mountain biking may seem intimidating at first, but with the right approach, it's accessible to people of all fitness levels and ages.</p>
+            
+            <figure>
+                <img src="images/mountain-bike-beginner.jpg" alt="Beginner mountain biker on gentle trail" width="800" height="500">
+                <figcaption>Starting on gentle, wide trails helps build confidence and skills</figcaption>
+            </figure>
+            <p class="prompt-description">Image prompt: "Beginner mountain biker on a gentle, wide dirt trail through a meadow, wearing helmet and basic gear, clear instructional view of proper riding position, bright daylight, encouraging scene."</p>
+            
+            <h3>Essential Gear:</h3>
+            <ul>
+                <li><strong>Bike</strong> - Start with a hardtail or entry-level full-suspension mountain bike.</li>
+                <li><strong>Helmet</strong> - Non-negotiable for safety (consider a model with MIPS protection).</li>
+                <li><strong>Gloves</strong> - Protect hands and improve grip.</li>
+                <li><strong>Eye Protection</strong> - Shield eyes from debris, insects, and branches.</li>
+                <li><strong>Water System</strong> - Hydration pack or water bottles.</li>
+                <li><strong>Basic Tool Kit</strong> - Multi-tool, spare tube, tire levers, and pump.</li>
+            </ul>
+            
+            <p>Begin on easy, wide trails with minimal technical features. Focus on fundamental skills like proper body position, braking technique, and looking ahead. Consider taking a beginner clinic or lesson from a certified instructor to accelerate your learning curve and avoid developing bad habits.</p>
+            
+            <p>As you build confidence, gradually progress to more challenging trails, always riding within your ability level. Remember that everyone progresses at their own pace, and the goal is to have fun while staying safe.</p>
+        </section>
+
+        <!-- Why Section -->
+        <section id="why">
+            <h2>Why Mountain Biking?</h2>
+            <p>Mountain biking offers a unique combination of benefits that few other activities can match, making it a transformative hobby for many riders.</p>
+            
+            <figure>
+                <img src="images/mountain-biking-vista.jpg" alt="Mountain biker enjoying scenic vista" width="800" height="500">
+                <figcaption>Mountain biking takes you to breathtaking locations and viewpoints</figcaption>
+            </figure>
+            <p class="prompt-description">Image prompt: "Mountain biker standing with bike at a scenic mountain overlook, expansive valley view, early morning light, fog in valleys below, contemplative moment, inspiring landscape."</p>
+            
+            <h3>Physical Benefits:</h3>
+            <ul>
+                <li>Full-body workout emphasizing legs, core, and upper body</li>
+                <li>Improves cardiovascular fitness and endurance</li>
+                <li>Develops balance, coordination, and reflexes</li>
+                <li>Lower impact than running, reducing joint stress</li>
+            </ul>
+            
+            <h3>Mental Benefits:</h3>
+            <ul>
+                <li>Stress reduction through immersion in nature</li>
+                <li>Flow state experiences during rides</li>
+                <li>Confidence building through skill progression</li>
+                <li>Mental focus training as trails require full attention</li>
+            </ul>
+            
+            <p>Beyond the physical and mental benefits, mountain biking connects you with a passionate community of like-minded individuals. The shared experiences on trails often lead to lasting friendships and a sense of belonging. Additionally, riders often become environmental advocates, contributing to trail maintenance and conservation efforts to preserve the natural areas they enjoy.</p>
+        </section>
+
+        <!-- AI Prompts Section -->
+        <section id="ai">
+            <h2>AI Prompts Used</h2>
+            <p>This section documents all the AI prompts used to generate this website, including HTML structure, JavaScript functionality, styling, content, and images. I used Claude 3.7 Sonnet for all content generation.</p>
+            
+            <h3>Site Structure and Layout Prompt:</h3>
+            <div class="prompt-description">
+                "Create a single-page HTML website about mountain biking as a hobby. The page should have sections for 'who' (about me), 'what' (explaining the hobby), 'when' (best times/seasons), 'where' (best locations), 'how' (getting started), 'why' (benefits), and 'AI Prompts' (this section). Include embedded CSS with a nature-inspired color scheme (greens, browns, earthy tones). Create a navigation system that shows only one section at a time using JavaScript. Each section should have at least three elements including paragraphs, images with captions, lists, or tables. Make it responsive and visually appealing with a clean, modern design that follows CRAP principles."
+            </div>
+            
+            <h3>JavaScript Section Navigation Prompt:</h3>
+            <div class="prompt-description">
+                "Write JavaScript code that implements section navigation for a single-page website. When a user clicks on a navigation link, it should hide all sections and only display the one corresponding to the clicked link. The code should ensure that when a section is picked, all other sections are hidden and cannot be seen by the user until they click something else. Additionally, add an active state to the selected navigation link. The default section to show when the page loads should be the 'what' section."
+            </div>
+            
+            <h3>Styling and CRAP Principles Prompt:</h3>
+            <div class="prompt-description">
+                "Create an embedded stylesheet for a mountain biking hobby website that follows CRAP principles (Contrast, Repetition, Alignment, Proximity). Use a nature-inspired color scheme with greens and earthy tones that differs from my main site. Do not use Times New Roman, white background, black text, or generic blue underlined links. Include responsive design elements, proper spacing, visual hierarchy, and consistent styling across all sections. Add hover effects for interactive elements and ensure good readability with appropriate font choices."
+            </div>
+            
+            <figure>
+                <img src="images/mountain-bike-website-mockup.jpg" alt="Mountain biking website design mockup" width="800" height="500">
+                <figcaption>Design mockup for the mountain biking hobby website</figcaption>
+            </figure>
+            <p class="prompt-description">Image prompt: "Professional web design mockup for a mountain biking hobby website showing a homepage with green and earth tone color scheme, showing navigation menu and content sections, clean modern layout, with mountain biking imagery, photorealistic style."</p>
+            
+            <h3>Section Content Generation Prompts:</h3>
+            <p>For each section, I used the following prompts to generate detailed, informative content:</p>
+            
+            <h4>What Section:</h4>
+            <div class="prompt-description">
+                "Write an informative introduction to mountain biking as a hobby for the 'What' section of a website. Include 3 paragraphs covering: what mountain biking is, the history/evolution of the sport, and the different types/disciplines of mountain biking. The tone should be enthusiastic but informative, with specific details that would interest both beginners and experienced riders."
+            </div>
+            
+            <h4>Who Section:</h4>
+            <div class="prompt-description">
+                "Write a personal 'About Me' section for a mountain biking hobby website. Create 3 paragraphs that describe a fictional rider's journey with mountain biking, including how they got started, what type of riding they prefer, their current bike setup, and how the sport has impacted their life. Make it relatable and authentic."
+            </div>
+            
+            <h4>When Section:</h4>
+            <div class="prompt-description">
+                "Write content for the 'Best Times' section of a mountain biking website. Include information about optimal seasons for riding, considerations for weather conditions, and best times of day. Create a table comparing the advantages and challenges of riding in different seasons, and add a paragraph about daily timing considerations."
+            </div>
+            
+            <h4>Where Section:</h4>
+            <div class="prompt-description">
+                "Create content for the 'Best Trails' section of a mountain biking website. Write 2-3 paragraphs about popular mountain biking destinations in the United States, include a list of at least 5 top locations with brief descriptions of what makes each special, and add travel tips for mountain bikers visiting new trail systems."
+            </div>
+            
+            <h4>How Section:</h4>
+            <div class="prompt-description">
+                "Write a 'Getting Started with Mountain Biking' section for a hobby website. Include 2-3 paragraphs covering the basics of getting into the sport, a list of essential gear/equipment needed for beginners, and practical advice on skill development and progression. The content should be encouraging but realistic about the learning curve."
+            </div>
+            
+            <h4>Why Section:</h4>
+            <div class="prompt-description">
+                "Create content for the 'Why Mountain Biking' section of a hobby website. Write 2-3 paragraphs about the benefits of mountain biking, separate lists for physical and mental benefits, and information about the community and environmental aspects of the sport. The tone should highlight the transformative potential of mountain biking as a lifestyle."
+            </div>
+            
+            <h3>Image Generation Prompts:</h3>
+            <p>All images were generated using specific prompts designed to create cohesive, photorealistic visuals:</p>
+            
+            <ul>
+                <li><strong>Trail Scene (What section):</strong> "A mountain biker riding through a forest trail, morning light filtering through trees, photorealistic style, action shot from the side, wide path with green foliage, no people visible in the foreground, 4K quality, natural colors"</li>
+                
+                <li><strong>Rider Portrait (Who section):</strong> "Mountain biker taking a break on a scenic overlook, wearing helmet and sunglasses, looking at the camera, mountains in background, natural lighting, photorealistic style, high resolution, warm afternoon light, slightly sweaty but happy expression"</li>
+                
+                <li><strong>Fall Biking (When section):</strong> "Mountain biker riding through a forest trail with vibrant autumn foliage, golden light, colorful red and orange leaves, natural setting, action shot from behind the rider, dust particles visible in sunbeams, crisp detail, mid-October scenery, high contrast"</li>
+                
+                <li><strong>Moab Desert (Where section):</strong> "Mountain biker riding on red slickrock in Moab, Utah, vast desert landscape, clear blue sky, distant red rock formations, wide angle shot showing the scale of the landscape, tiny rider against massive backdrop, photorealistic, dramatic shadows, late afternoon light"</li>
+                
+                <li><strong>Beginner Rider (How section):</strong> "Beginner mountain biker on a gentle, wide dirt trail through a meadow, wearing helmet and basic gear, clear instructional view of proper riding position, bright daylight, encouraging scene, green rolling hills in background, entry-level hardtail mountain bike, realistic lighting, shallow depth of field"</li>
+                
+                <li><strong>Scenic Vista (Why section):</strong> "Mountain biker standing with bike at a scenic mountain overlook, expansive valley view, early morning light, fog in valleys below, contemplative moment, inspiring landscape, silhouette of mountains in distance, bike leaning against rider's side, golden hour lighting, sense of accomplishment, high resolution detail"</li>
+                
+                <li><strong>Website Mockup (AI section):</strong> "Professional web design mockup for a mountain biking hobby website showing a homepage with green and earth tone color scheme, showing navigation menu and content sections, clean modern layout, with mountain biking imagery, photorealistic style"</li>
+            </ul>
+            
+            <p>All text content, HTML structure, CSS styling, and JavaScript functionality were generated using Claude 3.7 Sonnet, with prompts crafted to create a comprehensive, informative, and visually appealing hobby website that meets all assignment requirements.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed By &copy; 2025 <a href="../jnanatechsolutions.com">Jnana Tech Solutions</a></p>
+        <div class="validation-links">
+            <a href="https://validator.w3.org/check?uri=referer" id="validation-link-html">
+                <img src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation-link-css">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to handle navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all sections and nav links
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            // Hide all sections except the default one (what/home)
+            function showSection(sectionId) {
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+                document.getElementById(sectionId).style.display = 'block';
+                
+                // Update active link
+                navLinks.forEach(link => {
+                    link.classList.remove('active-link');
+                    if (link.id === 'nav-' + sectionId) {
+                        link.classList.add('active-link');
+                    }
+                });
+            }
+            
+            // Add click event listeners to all nav links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionId = this.id.replace('nav-', '');
+                    showSection(sectionId);
+                });
+            });
+            
+            // Show default section (what/home) on page load
+            showSection('what');
+        });
+        
+        // Update validation links
+        document.getElementById("validation-link-html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation-link-css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+</body>
+</html>
