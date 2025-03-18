@@ -6,7 +6,7 @@
     <title>Mountain Biking Adventures | Jnana Krishnamsetty</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
-        /* Embedded stylesheet as required */
+
         :root {
             --primary: #2E8B57;
             --secondary: #3A5F0B;
@@ -72,10 +72,9 @@
             padding: 25px;
             margin-bottom: 30px;
             box-shadow: 0 2px 5px var(--shadow);
-            display: none; /* Hidden by default */
+            display: none; 
         }
 
-        /* Show the "what" section by default */
         #what {
             display: block;
         }
@@ -88,7 +87,9 @@
         }
 
         figure {
-            margin: 20px 0;
+            margin: 20px auto;
+            text-align: center;
+            max-width: 800px;
         }
 
         figure img {
@@ -96,6 +97,8 @@
             height: auto;
             border-radius: 8px;
             box-shadow: 0 3px 6px var(--shadow);
+            display: block;
+            margin: 0 auto;
         }
 
         figcaption {
@@ -228,7 +231,7 @@
     </header>
 
     <main>
-        <!-- Home/What Section -->
+
         <section id="what">
             <h2>Welcome to the World of Mountain Biking</h2>
             <p>Mountain biking is an exhilarating outdoor activity that combines adventure, exercise, and a connection with nature. Riders navigate trails of varying difficulty through forests, mountains, and various terrains on specially designed bikes.</p>
@@ -244,7 +247,6 @@
             <p>Whether you're seeking adrenaline rushes down steep descents, peaceful rides through scenic terrain, or the physical challenge of climbing technical trails, mountain biking offers something for everyone.</p>
         </section>
 
-        <!-- Who/About Me Section -->
         <section id="who">
             <h2>About Me</h2>
             <p>My journey with mountain biking began five years ago when I was looking for an outdoor activity that combined adventure, exercise, and exploration. What started as weekend rides on local trails quickly evolved into a passion that has taken me across numerous trail systems throughout the United States.</p>
@@ -260,7 +262,6 @@
             <p>Through mountain biking, I've connected with an incredible community of riders, improved my physical fitness dramatically, and discovered hidden natural gems I would have never encountered otherwise. The sport has become more than just a hobby - it's a lifestyle that has shaped how I plan vacations, spend weekends, and even the friends I've made along the way.</p>
         </section>
 
-        <!-- When Section -->
         <section id="when">
             <h2>Best Seasons & Times to Ride</h2>
             <p>The ideal time for mountain biking depends largely on your location, but generally, there are optimal seasons and times of day that enhance the experience.</p>
@@ -306,7 +307,6 @@
             <p>For daily timing, early mornings or late afternoons generally provide the best riding conditions. Morning rides offer crisp air, better visibility, and fewer trail users. Evening rides feature beautiful lighting and cooler temperatures after hot days. Avoiding midday rides during summer months is recommended due to heat and higher UV exposure.</p>
         </section>
 
-        <!-- Where Section -->
         <section id="where">
             <h2>Best Mountain Biking Locations</h2>
             <p>The United States offers an incredible variety of mountain biking destinations, from flowing singletrack to technical rock gardens and everything in between.</p>
@@ -329,7 +329,6 @@
             <p>When traveling to ride, always research trail conditions in advance, respect local rules, and consider hiring a local guide for your first day to discover the best routes.</p>
         </section>
 
-        <!-- How Section -->
         <section id="how">
             <h2>Getting Started with Mountain Biking</h2>
             <p>Mountain biking may seem intimidating at first, but with the right approach, it's accessible to people of all fitness levels and ages.</p>
@@ -355,7 +354,6 @@
             <p>As you build confidence, gradually progress to more challenging trails, always riding within your ability level. Remember that everyone progresses at their own pace, and the goal is to have fun while staying safe.</p>
         </section>
 
-        <!-- Why Section -->
         <section id="why">
             <h2>Why Mountain Biking?</h2>
             <p>Mountain biking offers a unique combination of benefits that few other activities can match, making it a transformative hobby for many riders.</p>
@@ -385,7 +383,6 @@
             <p>Beyond the physical and mental benefits, mountain biking connects you with a passionate community of like-minded individuals. The shared experiences on trails often lead to lasting friendships and a sense of belonging. Additionally, riders often become environmental advocates, contributing to trail maintenance and conservation efforts to preserve the natural areas they enjoy.</p>
         </section>
 
-        <!-- AI Prompts Section -->
         <section id="ai">
             <h2>AI Prompts Used</h2>
             <p>This section documents all the AI prompts used to generate this website, including HTML structure, JavaScript functionality, styling, content, and images. I used Claude 3.7 Sonnet for all content generation.</p>
@@ -480,20 +477,16 @@
     </footer>
 
     <script>
-        // JavaScript to handle navigation
         document.addEventListener('DOMContentLoaded', function() {
-            // Get all sections and nav links
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('nav a');
             
-            // Hide all sections except the default one (what/home)
             function showSection(sectionId) {
                 sections.forEach(section => {
                     section.style.display = 'none';
                 });
                 document.getElementById(sectionId).style.display = 'block';
                 
-                // Update active link
                 navLinks.forEach(link => {
                     link.classList.remove('active-link');
                     if (link.id === 'nav-' + sectionId) {
@@ -502,7 +495,6 @@
                 });
             }
             
-            // Add click event listeners to all nav links
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -511,7 +503,6 @@
                 });
             });
             
-            // Show default section (what/home) on page load
             showSection('what');
         });
         
