@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Tables || ITIS 3135</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+        table tr:first-child {
+            background-color: #444;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd):not(:first-child) {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h2 class="main-h2">Employee Table Assignment</h2>
+
+        <h3>My Tabular Data</h3>
+        <ol>
+            <li>Ava Thornton - ava@stellarbrands.com</li>
+            <li>Miles Bennett - mbennett@sparkinnovate.io</li>
+            <li>Zoe Patel - zoe.patel@thinkhub.org</li>
+            <li>Jackson Lin - j.lin@fusionapps.com</li>
+            <li>Luna Delgado - luna@visionframe.net</li>
+            <li>Noah Carter - noah@carterandco.biz</li>
+            <li>Priya Nair - priya.nair@nextwave.tech</li>
+        </ol>
+
+        <h3>Employee Data in Simple Table</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Years of Service</th>
+            </tr>
+            <tr><td>Ava Thornton</td><td>ava@stellarbrands.com</td><td>7</td></tr>
+            <tr><td>Miles Bennett</td><td>mbennett@sparkinnovate.io</td><td>14</td></tr>
+            <tr><td>Zoe Patel</td><td>zoe.patel@thinkhub.org</td><td>5</td></tr>
+            <tr><td>Jackson Lin</td><td>j.lin@fusionapps.com</td><td>9</td></tr>
+            <tr><td>Luna Delgado</td><td>luna@visionframe.net</td><td>3</td></tr>
+            <tr><td>Noah Carter</td><td>noah@carterandco.biz</td><td>18</td></tr>
+            <tr><td>Priya Nair</td><td>priya.nair@nextwave.tech</td><td>12</td></tr>
+        </table>
+
+        <h3>Employee Data in Complex Table</h3>
+        <figure>
+            <figcaption>Employee Information</figcaption>
+            <table>
+                <tr>
+                    <th id="dept">Department</th>
+                    <th id="name">Name</th>
+                    <th id="email">Email</th>
+                    <th id="years">Years of Service</th>
+                    <th id="salary">Monthly Salary ($)</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Marketing</td>
+                    <td headers="name">Ava Thornton</td>
+                    <td headers="email">ava@stellarbrands.com</td>
+                    <td headers="years">7</td>
+                    <td headers="salary">5400</td>
+                </tr>
+                <tr>
+                    <td headers="name">Priya Nair</td>
+                    <td headers="email">priya.nair@nextwave.tech</td>
+                    <td headers="years">12</td>
+                    <td headers="salary">6900</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Engineering</td>
+                    <td headers="name">Miles Bennett</td>
+                    <td headers="email">mbennett@sparkinnovate.io</td>
+                    <td headers="years">14</td>
+                    <td headers="salary">7500</td>
+                </tr>
+                <tr>
+                    <td headers="name">Jackson Lin</td>
+                    <td headers="email">j.lin@fusionapps.com</td>
+                    <td headers="years">9</td>
+                    <td headers="salary">6300</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Sales</td>
+                    <td headers="name">Zoe Patel</td>
+                    <td headers="email">zoe.patel@thinkhub.org</td>
+                    <td headers="years">5</td>
+                    <td headers="salary">4900</td>
+                </tr>
+                <tr>
+                    <td headers="name">Noah Carter</td>
+                    <td headers="email">noah@carterandco.biz</td>
+                    <td headers="years">18</td>
+                    <td headers="salary">8200</td>
+                </tr>
+                <tr>
+                    <td>Design</td>
+                    <td headers="name">Luna Delgado</td>
+                    <td headers="email">luna@visionframe.net</td>
+                    <td headers="years">3</td>
+                    <td headers="salary">4100</td>
+                </tr>
+                <tr>
+                    <th colspan="3">Total Years of Service</th>
+                    <td>68</td>
+                    <td>43400</td>
+                </tr>
+            </table>
+        </figure>
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script>
+        document.getElementById("validation-link-html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation-link-css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
