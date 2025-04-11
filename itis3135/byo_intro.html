@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Build Your Own Intro</title>
+  <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+  <main>
+    <h2>Build Your Own Intro</h2>
+    <h3>Time to BYO Intro page, please fill out the form below!</h3>
+
+    <form id="introForm">
+      <label>Name: <input type="text" id="name" value="Jnana Krishnamsetty" required></label><br>
+      <label>Mascot: <input type="text" id="mascot" value="Jeweled Kebab" required></label><br>
+      <label>Upload Image: <input type="file" id="image" accept="image/png, image/jpeg" required></label><br>
+      <label>Image Caption: <input type="text" id="caption" value="Jnana the Great" required></label><br>
+
+      <label>Personal Background:<br>
+        <textarea id="personal" required>Born in Charlotte, NC...</textarea>
+      </label><br>
+
+      <label>Professional Background:<br>
+        <textarea id="professional" required>Associate Software Engineer at TIAA...</textarea>
+      </label><br>
+
+      <label>Academic Background:<br>
+        <textarea id="academic" required>BS in Computer Science, UNC-Chapel Hill</textarea>
+      </label><br>
+
+      <label>Background in Web Development:<br>
+        <textarea id="webDev" required>Completed courses in HTML, CSS, JS...</textarea>
+      </label><br>
+
+      <label>Primary Computer Platform: <input type="text" id="platform" value="Windows 11" required></label><br>
+
+      <div id="coursesContainer">
+        <label>Courses Currently Taking:</label><br>
+        <button type="button" onclick="addCourse()">Add Course</button>
+      </div>
+
+      <label>Funny Thing? <input type="text" id="funny"></label><br>
+      <label>Anything Else? <input type="text" id="other"></label><br>
+
+      <label>
+        <input type="checkbox" id="agreement" required>
+        I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
+      </label><br>
+
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset" onclick="resetForm()">
+    </form>
+
+    <div id="output"></div>
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <script src="scripts/HTMLInclude.min.js"></script>
+  <script src="scripts/survey.js"></script>
+</body>
+</html>
