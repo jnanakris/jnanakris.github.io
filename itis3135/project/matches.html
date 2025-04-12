@@ -1,0 +1,60 @@
+<!-- Page: Matches -->
+<!-- Author: Jnana Kris -->
+<!-- Description: Matches page for TravelPal project -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelPal | My Matches</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/default.css">
+</head>
+
+<body>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+
+  <main class="container py-4">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="images/volunteer-match.png" width="500" height="500" class="img-fluid rounded shadow" alt="Volunteer match card">
+      </div>
+      <div class="col-md-6">
+
+        <h2>Matched Volunteers</h2>
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Anna Smith</h5>
+            <p class="card-text">Will assist your mom on Delta DL123 from Charlotte to JFK.</p>
+            <a href="#" class="btn btn-primary">Message Anna</a>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Carlos Rivera</h5>
+            <p class="card-text">Volunteered for your child on United UA456 from ATL to Chicago.</p>
+            <a href="#" class="btn btn-primary">Message Carlos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <script>
+    document.getElementById("validation-link-html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation-link-css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+  </script>
+  <script src="scripts/HTMLInclude.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
