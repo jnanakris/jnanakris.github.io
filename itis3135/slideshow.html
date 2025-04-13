@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slideshow - Name Gallery</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide {
+            display: block;
+        }
+
+
+        .slide img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+
+        .caption {
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .thumbnail-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .thumbnail-list img {
+            width: 80px;
+            height: 50px;
+            object-fit: cover;
+            margin: 5px;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .thumbnail-list img.active {
+            border-color: #333;
+        }
+
+        .prompts {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h2>Slideshow Gallery: JNANA KRISHNAMSETTY</h2>
+        <div class="slideshow-container" id="slideshow">
+            <!-- Slides will be injected here -->
+            <div class="caption" id="caption"></div>
+            <div class="thumbnail-list" id="thumbnails"></div>
+        </div>
+
+        <div class="prompts">
+            <h3>AI Prompts Used (DALL·E):</h3>
+            <ul>
+                <li>J - Jewel in sunlight on wood</li>
+                <li>N - Night sky with stars</li>
+                <li>A - Apple on a table</li>
+                <li>N - Notebook with pen</li>
+                <li>A - Avocado sliced open</li>
+                <li>K - Kite flying in blue sky</li>
+                <li>R - Rainbow over a hill</li>
+                <li>I - Ice cube melting</li>
+                <li>S - Soccer ball on grass</li>
+                <li>H - Hat on a beach chair</li>
+                <li>N - Necklace on velvet</li>
+                <li>A - Airplane in sky</li>
+                <li>M - Mug of coffee</li>
+                <li>S - Sunflower field</li>
+                <li>E - Elephant in a jungle</li>
+                <li>T - Tree in autumn</li>
+                <li>T - Train on tracks</li>
+                <li>Y - Yo-yo spinning</li>
+            </ul>
+            <p><strong>Tool:</strong> DALL·E (OpenAI)</p>
+        </div>
+
+        <div>
+            <p>This is my original work. I did not copy or paste someone else's code.</p>
+            <p>Signed,<br>Jnana Krishnamsetty, 04/13/2025 2:20 pm</p>
+        </div>
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script>
+        const images = [
+            { letter: 'J', src: 'images/gallery/1-jewel.jpg', caption: 'J - for Jewel' },
+            { letter: 'N', src: 'images/gallery/2-necklace.jpg', caption: 'N - for Necklace' },
+            { letter: 'A', src: 'images/gallery/3-airplane.jpg', caption: 'A - for Airplane' },
+            { letter: 'N', src: 'images/gallery/4-night.jpg', caption: 'N - for Night' },
+            { letter: 'A', src: 'images/gallery/5-avocado.jpg', caption: 'A - Avocado' },
+            { letter: 'K', src: 'images/gallery/6-kite.jpg', caption: 'K - Kite' },
+            { letter: 'R', src: 'images/gallery/7-rainbow.jpg', caption: 'R - Rainbow' },
+            { letter: 'I', src: 'images/gallery/8-ice.jpg', caption: 'I - Ice' },
+            { letter: 'S', src: 'images/gallery/9-sunflower.jpg', caption: 'S - Sunflower' },
+            { letter: 'H', src: 'images/gallery/10-hat.jpg', caption: 'H - Hat' },
+            { letter: 'N', src: 'images/gallery/11-necklace.jpg', caption: 'N - Necklace' },
+            { letter: 'A', src: 'images/gallery/12-apple.jpg', caption: 'A - Apple' },
+            { letter: 'M', src: 'images/gallery/13-mug.jpg', caption: 'M - Mug' },
+            { letter: 'S', src: 'images/gallery/14-soccer.jpg', caption: 'S - Sockker' },
+            { letter: 'E', src: 'images/gallery/15-elephant.jpg', caption: 'E - Elephant' },
+            { letter: 'T', src: 'images/gallery/16-tree.jpg', caption: 'T - Tree' },
+            { letter: 'T', src: 'images/gallery/17-train.jpg', caption: 'T - Train' },
+            { letter: 'Y', src: 'images/gallery/18-yoyo.jpg', caption: 'Y - Yo-yo' },
+        ];
+
+        let current = 0;
+
+        function showSlide(index) {
+            const slide = images[index];
+            $('#slideshow .slide').remove();
+            $('#slideshow').prepend(`
+    <div class="slide">
+      <img src="${slide.src}" alt="${slide.letter} - ${slide.caption}">
+    </div>
+  `);
+            $('#caption').text(slide.caption); // Update only one caption
+        }
+
+
+        $(document).ready(() => {
+            // Load thumbnails
+            images.forEach((img, i) => {
+                $('#thumbnails').append(`<img src="${img.src}" alt="${img.letter}" onclick="showSlide(${i})">`);
+            });
+
+            // Initial slide
+            showSlide(0);
+        });
+    </script>
+</body>
+
+</html>
