@@ -2,9 +2,15 @@ const requestCount = 2;
 const matchCount = 3;
 
 document.addEventListener('DOMContentLoaded', () => {
-  const requestBadge = document.querySelector('a[href="requests.html"] .badge');
-  if (requestBadge) requestBadge.textContent = requestCount;
+  const intervalId = setInterval(() => {
+    const requestBadge = document.getElementById('reqBadgeId');
+    const matchBadge = document.getElementById('matBadgeId');
 
-  const matchBadge = document.querySelector('a[href="matches.html"] .badge');
-  if (matchBadge) matchBadge.textContent = matchCount;
+    if (requestBadge && matchBadge) {
+      requestBadge.textContent = requestCount;
+      matchBadge.textContent = matchCount;
+      clearInterval(intervalId); // Stop checking once updated
+    }
+  }, 100); // Check every 100 milliseconds
 });
+
